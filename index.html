@@ -177,10 +177,11 @@
    <!-- Skip to main content for accessibility -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- HERO SECTION - properly closed -->
 <section class="hero">
     <div class="hero-content">
         <h1>Reduce waste save cost</h1>
-        <p class="subtitle">make team self sufficient & drive change ="typewriter"></span></p>
+        <p class="subtitle">make team self sufficient & drive change<span class="typewriter"></span></p>
         <div class="hero-buttons">
             <a href="mailto:reni-ilieva@outlook.com" class="hero-button primary-button" aria-label="Send email to Reni Ilieva">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 8px;">
@@ -195,23 +196,24 @@
         </div>
     </div>
     <div class="scroll-indicator"></div>
-  <main id="main-content">
-        <!-- About Section -->
-        <section class="about section" id="about">
-            <div class="container">
-                <div class="section-content">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="about-content">
-                        <p class="about-text">I'm a results-driven leader who believes that people and processes go hand in hand. Known for a can-do mentality, high customer satisfaction in communication, and the ability to steer teams through change, I thrive on helping organizations unlock efficiency and long-term growth.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+</section> <!-- HERO SECTION PROPERLY CLOSED -->
 
-<!-- Main Content -->
+<!-- MAIN CONTENT - ONLY ONE MAIN TAG -->
 <main id="main-content" class="main-container">
     
-    <!-- Placeholders Section (formerly What I Do) -->
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p class="about-text">I'm a results-driven leader who believes that people and processes go hand in hand. Known for a can-do mentality, high customer satisfaction in communication, and the ability to steer teams through change, I thrive on helping organizations unlock efficiency and long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Placeholders Section -->
     <section class="placeholders-section">
         <div class="container">
             <div class="section-header">
@@ -386,10 +388,9 @@
         </div>
     </section>
     
-</main>
-    </main>
+</main> <!-- ONLY ONE CLOSING MAIN TAG -->
 
-    <!-- Load JavaScript -->
-    <script src="renitest2.js"></script>
+<!-- Load JavaScript -->
+<script src="renitest2.js"></script>
 </body>
 </html>
