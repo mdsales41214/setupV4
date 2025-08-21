@@ -1,6 +1,28 @@
 /* ================================
    Reset and Base Styles
    ================================ */
+/* Accessibility skip link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #3a86ff;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Ensure SVG icons display correctly */
+.hero-button svg {
+    vertical-align: middle;
+    margin-right: 8px;
+}
 
 /* Skip link for accessibility */
 .skip-link {
