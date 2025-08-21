@@ -480,3 +480,116 @@ function supportsFeature(feature) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { ReniLandingPage, debounce, throttle, supportsFeature };
 }
+
+// STUNNING HERO INTERACTIONS
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Create floating particles
+    function createParticles() {
+        const particlesContainer = document.createElement('div');
+        particlesContainer.className = 'particles';
+        document.querySelector('.hero').appendChild(particlesContainer);
+        
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    }
+    
+    // Typewriter effect for subtitle
+    const subtitles = [
+        "Building the future of web experiences",
+        "Where innovation meets creativity",
+        "Transforming ideas into reality",
+        "Next-level digital solutions"
+    ];
+    
+    let subtitleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeWriter() {
+        const subtitle = document.querySelector('.subtitle');
+        if (!subtitle) return;
+        
+        const currentText = subtitles[subtitleIndex];
+        
+        if (isDeleting) {
+            subtitle.innerHTML = currentText.substring(0, charIndex - 1) + '<span class="typewriter"></span>';
+            charIndex--;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                subtitleIndex = (subtitleIndex + 1) % subtitles.length;
+                setTimeout(typeWriter, 500);
+                return;
+            }
+        } else {
+            subtitle.innerHTML = currentText.substring(0, charIndex + 1) + '<span class="typewriter"></span>';
+            charIndex++;
+            
+            if (charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 2000);
+                return;
+            }
+        }
+        
+        setTimeout(typeWriter, isDeleting ? 50 : 100);
+    }
+    
+    // Magnetic button effect
+    document.querySelectorAll('.hero-button').forEach(button => {
+        button.addEventListener('mousemove', (e) => {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            button.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translate(0, 0) scale(1)';
+        });
+    });
+    
+    // Parallax effect on mouse move
+    document.addEventListener('mousemove', (e) => {
+        const hero = document.querySelector('.hero');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            heroContent.style.transform = `translate(${(x - 0.5) * 20}px, ${(y - 0.5) * 20}px)`;
+        }
+    });
+    
+    // Smooth scroll on indicator click
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Initialize effects
+    createParticles();
+    setTimeout(typeWriter, 1000);
+    
+    // Add glow effect on scroll
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            heroContent.style.boxShadow = `0 ${8 + scrolled * 0.1}px ${32 + scrolled * 0.1}px rgba(131, 56, 236, ${0.3 + scrolled * 0.001})`;
+        }
+    });
+});
