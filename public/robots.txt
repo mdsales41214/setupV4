@@ -1,0 +1,55 @@
+ 
+# robots.txt voor energievergelijken.trade
+# Gegenereerd: 2025-10-05
+
+User-agent: *
+Allow: /
+
+# Beveiligde gebieden
+Disallow: /config/
+Disallow: /includes/
+Disallow: /logs/
+Disallow: /backups/
+Disallow: /_progress/
+Disallow: /src/
+
+# API endpoints (indien later toegevoegd)
+Disallow: /api/internal/
+
+# Sessie parameters
+Disallow: /*?session=
+Disallow: /*?sid=
+Disallow: /*&session=
+Disallow: /*&sid=
+
+# Zoek en filter parameters (toestaan voor SEO)
+Allow: /*?postcode=
+Allow: /*?type=
+Allow: /*?verbruik=
+
+# Sitemaps
+Sitemap: https://energievergelijken.trade/sitemap.xml
+Sitemap: https://energievergelijken.trade/sitemap-blog.xml
+
+# Crawl-delay voor bots (vriendelijk voor server)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: Slurp
+Crawl-delay: 2
+
+# Blokkeer slechte bots
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+Disallow: /
+
+# SEO tools toestaan (voor analysis)
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: rogerbot
+Allow: /
