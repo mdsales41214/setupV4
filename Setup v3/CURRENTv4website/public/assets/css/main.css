@@ -1,0 +1,390 @@
+ 
+/**
+ * Main Stylesheet
+ * energievergelijken.trade
+ * Full styles loaded after critical CSS
+ */
+
+/* ============================================
+   SECTIONS & LAYOUT
+   ============================================ */
+
+.section-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #1a202c;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #718096;
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* USP Section */
+.usp-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.usp-item {
+    text-align: center;
+    padding: 32px 24px;
+}
+
+.usp-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #00a651, #00d465);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.usp-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.usp-item p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 80px 0;
+    background: #f7fafc;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 64px;
+    height: 64px;
+    background: #00a651;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 auto 24px;
+}
+
+.step h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.step p {
+    color: #4a5568;
+}
+
+/* Tips Section */
+.tips-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.tip-card {
+    background: #f7fafc;
+    padding: 32px 24px;
+    border-radius: 12px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
+}
+
+.tip-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.tip-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a202c;
+}
+
+.tip-card p {
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+.tip-link {
+    color: #00a651;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tip-link:hover {
+    text-decoration: underline;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.review-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+}
+
+.review-stars {
+    color: #fbbf24;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #2d3748;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #00a651;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto 48px;
+}
+
+.faq-item {
+    background: #f7fafc;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 12px;
+}
+
+.faq-answer {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Final CTA */
+.final-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #00a651, #00d465);
+}
+
+.cta-box {
+    text-align: center;
+    color: #fff;
+}
+
+.cta-box h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 16px;
+}
+
+.cta-box p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    opacity: .95;
+}
+
+.cta-box .btn-primary {
+    background: #fff;
+    color: #00a651;
+}
+
+.cta-box .btn-primary:hover {
+    background: #f7fafc;
+}
+
+.cta-note {
+    margin-top: 16px;
+    font-size: 14px;
+    opacity: .9;
+}
+
+.cta-center {
+    text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+    background: #1a202c;
+    color: #cbd5e0;
+}
+
+.footer-main {
+    padding: 60px 0 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 48px;
+}
+
+.footer-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    color: #cbd5e0;
+    transition: color .2s;
+}
+
+.footer-social a:hover {
+    color: #00a651;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-links a:hover {
+    color: #00a651;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2d3748;
+    padding: 24px 0;
+}
+
+.footer-bottom-content {
+    text-align: center;
+}
+
+.copyright {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-note {
+    font-size: 12px;
+    opacity: .8;
+}
+
+/* Cookie Consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1a202c;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, .1);
+    z-index: 100;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-content a {
+    color: #00a651;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }

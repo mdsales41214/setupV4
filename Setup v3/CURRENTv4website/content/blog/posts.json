@@ -1,0 +1,47 @@
+ 
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "bespaar-energie-winter-2025",
+      "title": "10 Manieren om Energie te Besparen in de Winter 2025",
+      "excerpt": "Met deze 10 praktische tips bespaart u tot €400 per jaar op uw energierekening. Van slimme thermostaat tot ledverlichting.",
+      "content": "<p>De winter is de duurste tijd van het jaar voor uw energierekening. Met deze 10 bewezen tips bespaart u gemiddeld €400 per jaar.</p><h2>1. Verlaag de thermostaat met 1 graad</h2><p>Voor elke graad lager bespaart u 6-7% op stookkosten. Van 20°C naar 19°C = €150 besparing per jaar.</p><h2>2. Gebruik een slimme thermostaat</h2><p>Een slimme thermostaat zoals Nest of Tado bespaart gemiddeld 15% op uw verwarmingskosten.</p>",
+      "image": "/assets/images/blog/winter-tips.jpg",
+      "category": "Energietips",
+      "tags": ["besparen", "winter", "verwarming", "tips"],
+      "author": "Energie Expert",
+      "published_at": "2025-10-01",
+      "updated_at": "2025-10-01",
+      "read_time": "5 min"
+    },
+    {
+      "id": 2,
+      "slug": "overstappen-energieleverancier-guide",
+      "title": "Overstappen van Energieleverancier: Complete Gids 2025",
+      "excerpt": "Alles wat u moet weten over overstappen van energieleverancier. Stap voor stap uitgelegd, zonder gedoe.",
+      "content": "<p>Overstappen van energieleverancier is makkelijker dan u denkt. Deze gids legt alles uit.</p><h2>Wanneer kan ik overstappen?</h2><p>U kunt altijd overstappen, ook tijdens uw contract. Let wel op eventuele opzegkosten.</p><h2>Hoe werkt overstappen?</h2><p>1. Vergelijk aanbieders<br>2. Kies nieuwe leverancier<br>3. Nieuwe leverancier regelt alles<br>4. U hoeft niets te doen</p>",
+      "image": "/assets/images/blog/overstappen-guide.jpg",
+      "category": "Overstappen",
+      "tags": ["overstappen", "leverancier", "guide"],
+      "author": "Energie Expert",
+      "published_at": "2025-09-28",
+      "updated_at": "2025-09-28",
+      "read_time": "7 min"
+    },
+    {
+      "id": 3,
+      "slug": "verschil-vast-en-variabel-tarief",
+      "title": "Vast of Variabel Tarief? Wat is Voordeliger in 2025?",
+      "excerpt": "De eeuwige vraag: vast of variabel energietarief? We leggen het verschil uit en helpen u de beste keuze maken.",
+      "content": "<p>Het kiezen tussen een vast of variabel energietarief kan lastig zijn. Hier is wat u moet weten.</p><h2>Vast Tarief</h2><p>Voordeel: Zekerheid, prijs blijft hetzelfde<br>Nadeel: Vaak iets duurder, geen profijt van prijsdalingen</p><h2>Variabel Tarief</h2><p>Voordeel: Profiteert van lage prijzen<br>Nadeel: Onzekerheid, kan duurder worden</p>",
+      "image": "/assets/images/blog/vast-variabel.jpg",
+      "category": "Tarieven",
+      "tags": ["vast tarief", "variabel", "vergelijken"],
+      "author": "Energie Expert",
+      "published_at": "2025-09-25",
+      "updated_at": "2025-09-25",
+      "read_time": "4 min"
+    }
+  ]
+}

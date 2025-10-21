@@ -1,0 +1,309 @@
+═══════════════════════════════════════════════════════════════════
+ PROFESSIONAL WEBSITE STRUCTURE MAP
+ Complete File and Folder Overview
+═══════════════════════════════════════════════════════════════════
+
+ROOT: website/
+
+┌─────────────────────────────────────────────────────────────────┐
+│ PUBLIC FOLDER (Web Root)                                        │
+└─────────────────────────────────────────────────────────────────┘
+
+public/
+  ├─ index.php                    Main entry point
+  ├─ robots.txt                   Search engine rules
+  ├─ sitemap.xml                  SEO sitemap
+  ├─ security.txt                 Security contact
+  ├─ humans.txt                   Credits
+  ├─ browserconfig.xml            Microsoft tiles
+  ├─ manifest.json                PWA config
+  ├─ service-worker.js            Offline support
+  ├─ offline.html                 Offline page
+  ├─ 404.html                     Error page
+  ├─ ads.txt                      Google AdSense
+  ├─ app-ads.txt                  Mobile ads
+  └─ feed.xml                     RSS feed
+
+  .well-known/
+    └─ security.txt               RFC compliant location
+
+  assets/
+    ├─ css/
+    │   ├─ critical.css           Above-the-fold styles
+    │   └─ main.css               Main stylesheet
+    │
+    ├─ js/
+    │   ├─ app.js                 Main application
+    │   ├─ lazy-loading.js        Image lazy loading
+    │   ├─ cookie-consent.js      GDPR cookies
+    │   ├─ analytics.js           Analytics wrapper
+    │   ├─ web-vitals.js          Performance metrics
+    │   ├─ performance.js         Performance monitor
+    │   ├─ gtm.js                 Google Tag Manager
+    │   ├─ conversion-tracking.js Conversion goals
+    │   └─ search.js              Internal search UI
+    │
+    ├─ images/
+    │   ├─ logo.svg               Site logo
+    │   ├─ og-image.jpg           Social sharing
+    │   ├─ blog/                  Blog images
+    │   └─ favicons/
+    │       ├─ favicon.ico        Standard favicon
+    │       ├─ favicon-16x16.png  Small icon
+    │       ├─ favicon-32x32.png  Medium icon
+    │       ├─ apple-touch-icon.png iOS icon
+    │       ├─ android-chrome-192x192.png Android small
+    │       ├─ android-chrome-512x512.png Android large
+    │       ├─ mstile-144x144.png Microsoft tile
+    │       └─ safari-pinned-tab.svg Safari icon
+    │
+    ├─ fonts/
+    │   └─ inter-var.woff2        Web font
+    │
+    └─ uploads/
+        ├─ .gitkeep               Keep folder in git
+        └─ optimized/             GD processed images
+
+  pages/
+    ├─ contact.php                Contact form
+    ├─ privacybeleid.php          Privacy policy
+    ├─ voorwaarden.php            Terms & conditions
+    ├─ cookiebeleid.php           Cookie policy
+    ├─ toegankelijkheid.php       Accessibility statement
+    ├─ disclaimer.php             Legal disclaimer
+    ├─ blog.php                   Blog index
+    ├─ blog-post.php              Single post
+    └─ blog-category.php          Category archive
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ INCLUDES FOLDER (PHP Components)                                │
+└─────────────────────────────────────────────────────────────────┘
+
+includes/
+  ├─ head.php                     HTML head section
+  ├─ header.php                   Site header
+  ├─ footer.php                   Site footer
+  ├─ config.php                   Configuration
+  └─ functions.php                Helper functions
+
+  blog/
+    ├─ post-card.php              Post preview component
+    ├─ pagination.php             Blog pagination
+    └─ related-posts.php          Related content
+
+  forms/
+    ├─ contact-handler.php        Form processing
+    ├─ validator.php              Input validation
+    ├─ spam-filter.php            Spam protection
+    └─ honeypot.php               Bot detection
+
+  email/
+    └─ templates/
+        ├─ contact-notification.php Admin email
+        └─ contact-confirmation.php User receipt
+
+  security/
+    ├─ headers.php                Security headers
+    ├─ sanitizer.php              Input sanitization
+    ├─ rate-limiter.php           DDoS protection
+    ├─ csrf-token.php             CSRF protection
+    ├─ file-upload.php            Safe uploads
+    └─ input-validation.php       Validation rules
+
+  performance/
+    ├─ dns-prefetch.php           DNS optimization
+    ├─ preconnect.php             Early connections
+    ├─ preload.php                Resource preload
+    ├─ cache-control.php          Cache headers
+    └─ minification.php           Asset minification
+
+  marketing/
+    ├─ google-tag-manager.php     GTM integration
+    ├─ facebook-pixel.php         Facebook tracking
+    └─ linkedin-insight.php       LinkedIn tracking
+
+  search/
+    ├─ search-engine.php          Search logic
+    ├─ search-index.json          Search index
+    └─ search-suggestions.php     Autocomplete
+
+  seo/
+    ├─ meta-tags.php              Dynamic meta tags
+    ├─ structured-data.php        Schema.org base
+    ├─ schema-organization.php    Organization schema
+    ├─ schema-localbusiness.php   Local business schema
+    ├─ schema-faq.php             FAQ schema
+    ├─ schema-breadcrumb.php      Breadcrumb schema
+    ├─ schema-article.php         Article schema
+    ├─ schema-product.php         Product schema
+    ├─ canonical-urls.php         Canonical tags
+    ├─ social-meta.php            Open Graph + Twitter
+    ├─ redirect-manager.php       301/302 redirects
+    ├─ robots-meta.php            Meta robots tags
+    ├─ json-ld-generator.php      Schema generator
+    └─ rss-generator.php          RSS feed builder
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CONTENT FOLDER (Blog Data)                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+content/
+  └─ blog/
+      ├─ posts.json               Blog post metadata
+      └─ posts/                   Individual posts
+          └─ .gitkeep             Keep folder
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ SCRIPTS FOLDER (Automation)                                     │
+└─────────────────────────────────────────────────────────────────┘
+
+scripts/
+  ├─ backup.sh                    Automated backup
+  ├─ restore.sh                   Backup restore
+  ├─ db-backup.php                Database backup
+  ├─ generate-search-index.php    Build search index
+  └─ generate-sitemap.php         Build sitemap
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ SOURCE FILES (Build System)                                     │
+└─────────────────────────────────────────────────────────────────┘
+
+src/
+  ├─ scss/
+  │   ├─ _variables.scss          SCSS variables
+  │   ├─ _mixins.scss             SCSS mixins
+  │   ├─ _critical.scss           Critical CSS
+  │   ├─ _base.scss               Base styles
+  │   ├─ _components.scss         Components
+  │   └─ main.scss                Main SCSS file
+  │
+  └─ js/
+      ├─ modules/
+      │   ├─ cookieConsent.js     Cookie module
+      │   ├─ lazyLoad.js          Lazy loading
+      │   ├─ smoothScroll.js      Smooth scroll
+      │   └─ formValidation.js    Form validation
+      │
+      └─ utils/
+          ├─ helpers.js           Helper functions
+          └─ api.js               API wrapper
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ CONFIGURATION                                                   │
+└─────────────────────────────────────────────────────────────────┘
+
+config/
+  ├─ .env                         Environment secrets
+  ├─ .env.example                 Environment template
+  ├─ database.php                 Database config
+  ├─ constants.php                App constants
+  ├─ csp-policy.php               Content Security Policy
+  ├─ image-processing.php         GD Library config
+  └─ redirects.json               URL redirects
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ SERVER CONFIGURATION                                            │
+└─────────────────────────────────────────────────────────────────┘
+
+server/
+  ├─ .htaccess                    Apache config
+  ├─ nginx.conf                   Nginx config
+  ├─ web.config                   IIS config
+  └─ php.ini                      PHP settings
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ LOGS                                                            │
+└─────────────────────────────────────────────────────────────────┘
+
+logs/
+  ├─ .gitkeep                     Keep folder
+  ├─ error.log                    PHP errors
+  ├─ access.log                   Access tracking
+  └─ security.log                 Security events
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ BACKUPS                                                         │
+└─────────────────────────────────────────────────────────────────┘
+
+backups/
+  ├─ .gitkeep                     Keep folder
+  ├─ daily/                       Daily backups
+  ├─ weekly/                      Weekly backups
+  └─ monthly/                     Monthly backups
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ TESTS                                                           │
+└─────────────────────────────────────────────────────────────────┘
+
+tests/
+  ├─ SecurityTest.php             Security testing
+  ├─ SEOTest.php                  SEO validation
+  ├─ PerformanceTest.php          Performance tests
+  └─ FormTest.php                 Form testing
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ DOCUMENTATION                                                   │
+└─────────────────────────────────────────────────────────────────┘
+
+docs/
+  ├─ deployment.md                Deploy instructions
+  ├─ security-policy.md           Security guidelines
+  └─ backup-restore.md            Backup procedures
+
+markdown/
+  ├─ structure-map.md             AI-friendly map
+  └─ structure-map.txt            Human-readable map
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│ ROOT FILES                                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+Root Files:
+  ├─ .gitignore                   Git exclusions
+  ├─ .editorconfig                Code style
+  ├─ .prettierrc                  Code formatting
+  ├─ .eslintrc.json               JS linting
+  ├─ package.json                 NPM dependencies
+  ├─ package-lock.json            NPM lock file
+  ├─ composer.json                PHP dependencies
+  ├─ composer.lock                PHP lock file
+  ├─ gulpfile.js                  Build automation
+  ├─ lighthouse.config.js         Performance CI
+  ├─ README.md                    Project readme
+  ├─ CHANGELOG.md                 Version history
+  └─ LICENSE                      License file
+
+
+═══════════════════════════════════════════════════════════════════
+ SUMMARY
+═══════════════════════════════════════════════════════════════════
+
+ Total Files:       140+
+ Total Directories: 45+
+
+ Features:
+ • Complete SEO optimization
+ • Schema.org structured data
+ • Performance optimization  
+ • Security hardening
+ • Marketing integrations (GTM, Facebook, LinkedIn)
+ • Internal search engine
+ • Blog system with pagination
+ • Automated backup system
+ • Testing framework
+ • PWA support
+ • Offline functionality
+ • GDPR compliance
+
+═══════════════════════════════════════════════════════════════════

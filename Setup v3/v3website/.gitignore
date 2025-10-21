@@ -1,0 +1,27 @@
+/node_modules
+/vendor
+/.env
+/.DS_Store
+/Thumbs.db
+/logs/*
+!/logs/.gitkeep
+/web/assets/css/*.map
+/web/assets/js/*.map
+/web/assets/uploads/*
+!/web/assets/uploads/.gitkeep
+!/web/assets/uploads/optimized/.gitkeep
+/build/
+/coverage/
+.vscode/
+.idea/
+phpstorm.xml
+*.bak
+*.swp
+*~
+# Composer
+/composer.lock
+/composer.phar
+# NPM
+/package-lock.json
+# Testing
+/test/
